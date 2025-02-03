@@ -1,12 +1,27 @@
 body{
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: rgb(7, 0, 24);
+    color: whitesmoke;
 }
 
 #background_canvas{
-    background-color: rgb(7, 0, 24);
     width: 100vw;
     height: 100vh;
     position: absolute;
     z-index: -100;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.column{
+    width: fit-content;
+    min-height: 100vh;
 }
