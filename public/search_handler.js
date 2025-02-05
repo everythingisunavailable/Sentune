@@ -1,6 +1,8 @@
 async function search(){
   let sentence = document.getElementById('input').value;
   console.log('searching...');
+  //while waiting for response
+  display_skeleton();
   await getData(sentence);
 }
 
@@ -15,27 +17,33 @@ async function getData(sentence) {
         throw new Error(`Response status: ${response.status}`);
       }
       const txt = await response.text();
-      
       try {
         json = JSON.parse(txt);
-        json.forEach(element => {
-          display(element.name);
-          display('------------------------------------------------------');
-        });
-        
+        //display songs (duh)
+        display_song(json);  
       } catch (error) {
         //display error received
         console.log(txt);
       }
-      
       
     } catch (error) {
       console.error(error.message);
     }
 }
 
-function display(string){
-  let song = document.createElement('p');
-  song.innerHTML = string;
-  document.querySelector(".main").appendChild(song);
+function display_song(json){
+  let main = document.querySelector(".main");
+  main.innerHTML = '';
+  json.forEach(element => {
+    create_song(element.name, main);
+  });
+}
+
+function create_song(title, main){
+  //TO DO : create banner properly and clickable
+  
+  let p = document.createElement('p');
+  
+  p.innerHTML = title;
+  main.appendChild(p);
 }

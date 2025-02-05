@@ -7,6 +7,16 @@ body{
     color: whitesmoke;
 }
 
+.flex_center_row{
+    display: flex;
+    justify-content: center;
+}
+.flex_center_col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #background_canvas{
     width: 100vw;
     height: 100vh;
@@ -17,11 +27,42 @@ body{
 .wrapper{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
     overflow-y: scroll;
 }
 .column{
     width: fit-content;
-    min-height: 100vh;
+    height: fit-content;
+    position: relative;
+}
+
+
+.logo{
+    max-width:  30rem;
+    height: 50vh;
+    justify-content: center;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.search_div{
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+}
+.search_div input, .search_div button{
+    all: unset;
+    height: 2rem;
+}
+.search_div input{
+    width: 70%;
+    border: 2px solid whitesmoke;
+    padding-left: 1rem;
+}
+.search_div button{
+    width: 4rem;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    cursor: pointer;
 }

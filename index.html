@@ -10,16 +10,22 @@
 
     <canvas id="background_canvas"></canvas>
 
-    <div class="wrapper">
-        <div class="column">
-            <div class="logo"><h1>SENTUNE</h1></div>
-            <input type="text" id="input">
-            <button onclick="search()">Search</button>
+    <div class="wrapper flex_center_row">
+        <div class="column flex_center_col">
+            
+            <div class="logo flex_center_col"><img src="public/res/logo_draft_2.png" alt="SENTUNE"></div>
+            
+            <div class="search_div flex_center_row">
+                <input type="text" id="input" placeholder="type a sentence...">
+                <button onclick="search()">Search</button>
+            </div>
+            
             <div class="main"></div>
         </div>
     </div>
 
     <script src="public/search_handler.js"></script>
+    <script src="public/animations.js"></script>
     <script src="public/background.js"></script>
 </body>
 </html>
