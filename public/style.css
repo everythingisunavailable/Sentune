@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 body{
     width: 100vw;
     height: 100vh;
@@ -5,6 +7,17 @@ body{
     padding: 0;
     background-color: rgb(7, 0, 24);
     color: whitesmoke;
+    font-family: "Space Grotesk", serif;
+}
+
+h2{
+    all: unset;
+    font-size: x-large;
+}
+h3{
+    all: unset;
+    font-size: large;
+    opacity: 0.5;
 }
 
 .flex_center_row{
@@ -41,7 +54,7 @@ body{
     height: 50vh;
     justify-content: center;
 }
-.logo img{
+img{
     width: 100%;
     height: auto;
 }
@@ -87,6 +100,7 @@ body{
     border-radius: 1rem;
     align-items: center;
     margin-top: 1rem;
+    transition: opacity 0.3s ease;
 }
 .image{
     width: 7rem;
@@ -95,10 +109,10 @@ body{
     left: 0.5rem;
     background-color: rgb(60, 60, 60);
     border-radius: 1rem;
+    overflow: hidden;
 }
 
 .description{
-    color: black;
     width: 100%;
     height: 7rem;
     padding-left: 37%;
@@ -135,4 +149,9 @@ body{
     100%{
         transform: translateX(0);
     }
+}
+
+.banner:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
