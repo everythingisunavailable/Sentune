@@ -19,10 +19,12 @@ async function getData(sentence) {
       const txt = await response.text();
       try {
         json = JSON.parse(txt);
-        //display songs (duh)
+
+        //display songs
         display_song(json);  
       } catch (error) {
         //display error received
+        display_error(txt);
         console.log(txt);
       }
       
@@ -32,6 +34,8 @@ async function getData(sentence) {
 }
 
 function display_song(json){
+  console.log(json);
+  
   let main = document.querySelector(".main");
   main.innerHTML = '';
   json.forEach(element => {
@@ -45,5 +49,15 @@ function create_song(title, main){
   let p = document.createElement('p');
   
   p.innerHTML = title;
+  main.appendChild(p);
+}
+
+function display_error(error){
+  let main = document.querySelector(".main");
+  main.innerHTML = '';
+    
+  let p = document.createElement('p');
+  
+  p.innerHTML = error;
   main.appendChild(p);
 }
