@@ -10,6 +10,12 @@ body{
     font-family: "Space Grotesk", serif;
 }
 
+h1{
+    all: unset;
+    font-size: xx-large;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
 h2{
     all: unset;
     font-size: x-large;
@@ -18,6 +24,16 @@ h3{
     all: unset;
     font-size: large;
     opacity: 0.5;
+}
+.credit{
+    font-size: 1rem;
+    opacity: 0.5;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.credit svg{
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .flex_center_row{
@@ -44,13 +60,13 @@ h3{
 }
 .column{
     width: fit-content;
-    height: fit-content;
+    height: 100vh;
     position: relative;
 }
 
 
 .logo{
-    max-width:  30rem;
+    max-width:  60vh;
     height: 50vh;
     justify-content: center;
 }
@@ -68,7 +84,18 @@ img{
     all: unset;
     height: 3rem;
     background-color: rgb(35, 35, 35);
-    box-shadow: 0 0 7px 2px blue;
+    animation: glow 2s ease infinite;
+}
+@keyframes glow{
+    0%{
+        box-shadow: 0 0 2px 1px blue;
+    }
+    50%{
+        box-shadow: 0 0 7px 3px blue;
+    }
+    100%{
+        box-shadow: 0 0 2px 1px blue;
+    }
 }
 .search_div input{
     width: 70%;
@@ -86,9 +113,19 @@ img{
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
+button:hover, button:focus{
+    background: linear-gradient(to left, rgb(35, 35, 35), blue, rgb(35, 35, 35));
+}
+svg{
+    transition: transform 0.5s ease;
+}
+svg:hover, svg:focus{
+    transform: rotate(45deg);
+}
 
 .main{
     width: 100%;
+    min-height: 18rem;
     margin-top: 1rem;
 }
 
@@ -99,7 +136,7 @@ img{
     background-color:rgb(35, 35, 35);
     border-radius: 1rem;
     align-items: center;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     transition: opacity 0.3s ease;
 }
 .image{
@@ -150,7 +187,6 @@ img{
         transform: translateX(0);
     }
 }
-
 .banner:hover{
     cursor: pointer;
     opacity: 0.8;

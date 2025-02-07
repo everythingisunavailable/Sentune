@@ -1,6 +1,5 @@
 async function search(){
   let sentence = document.getElementById('input').value;
-  console.log('searching...');
   //while waiting for response
   display_skeleton();
   await getData(sentence);

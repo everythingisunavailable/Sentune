@@ -1,4 +1,5 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] != 'POST') header('Location: ../'); die();
 
 try {
     require_once 'get_token.php'; //token is in session

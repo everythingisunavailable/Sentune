@@ -5,8 +5,8 @@ ini_set('session.use_strict_mode', 1);
 
 session_set_cookie_params([
     'lifetime' => 3600,
-    'domain' => 'localhost',//local version
+    'domain' => 'https://sentune.great-site.net/',
     'path' => '/',
     'secure' => true,
-    'httponly' => true
+    'httponly' => false
 ]);
